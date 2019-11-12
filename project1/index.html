@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layout</title>
+</head>
+<style>
+    html, body {
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        color: black;
+    }
+
+    section * {
+        width:100%;
+        height:100%;
+        font-size: 2rem;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+    section {
+        display: grid;
+        height: 100%;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 7rem 3fr 4rem;
+        grid-template-areas: "header header"
+                            "main aside"
+                            "footer footer";
+    }
+
+    header {
+        grid-area: header;
+        background: #0081ff;
+        justify-items: center;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main{
+        grid-area: main;
+        background: #ff8500;
+        justify-self: center;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    aside{
+        grid-area: aside;
+        background: black;
+        justify-self: center;
+        align-self: center;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer {
+        grid-area: footer;
+        background: #0081ff;
+        justify-self: center;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+</style>
+<body>
+    <section>
+        <header>Header</header>
+        <main>Main</main>
+        <aside>Aside</aside>
+        <footer>Footer</footer>
+    </section>
+</body>
+</html>
