@@ -1,0 +1,40 @@
+input[type="checkbox"].switch {
+    display: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input[type="checkbox"].switch:before {
+    position: absolute;
+    background: white;
+    border: 0.065rem solid lightgrey;
+    width: 2.7rem;
+    content: "";
+    display: block;
+    height: 1.5rem;
+    border-radius: 1.5rem;
+    transition: all 0.3s;
+}
+
+input[type="checkbox"].switch:checked:before {
+    background: blueviolet;
+    border: 0.065rem solid blueviolet;
+}
+
+input[type="checkbox"].switch:after {
+    position: absolute;
+    border-radius: 50%;
+    content: "";
+    width: 1.5rem;
+    height:1.5rem;
+    border: 0.065rem solid lightgrey;
+    background: white;
+    transform: translate(0, 0);
+    will-change: transform;
+    transition: transform 0.3s;
+}
+
+input[type="checkbox"].switch:checked:after {
+    transform: translate(1.2rem, 0);
+}
