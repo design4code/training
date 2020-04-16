@@ -5,16 +5,13 @@ export class DownloadContent {
     }
 
     getDownloads() {
-        const downloads = [
+        const files = [
             "/src/documents/1_p.md",
             '/src/documents/2_p.md',
             '/src/documents/3_p.md'
-        ]
-
-         const allDownloads = downloads.map(download => fetch(download)
-             .then( resolve => resolve.text())
-             .catch( err => console.log(err))
-         );
-        return Promise.all(allDownloads);
+        ];
+        const downloads = [];
+        files.forEach(file => downloads.push(fetch(file).then(resolve => resolve.text())));
+        return Promise.all(downloads);
     }
 }
