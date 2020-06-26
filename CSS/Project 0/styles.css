@@ -1,3 +1,16 @@
 body {
-   
+   --size : 12rem;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.simple {
+    width: var(--size);
+    height: var(--size);
+    background: cornflowerblue;
+    color: white;
+    border-radius: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-content: center;
 }
