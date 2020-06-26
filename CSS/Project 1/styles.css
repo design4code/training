@@ -1,0 +1,44 @@
+body, html {
+    height:100%;
+    padding:0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    height:100%;
+    align-items: center;
+}
+
+.cards div {
+    display: flex;
+    width: 10rem;
+    height: 7.5rem;
+    background: #dadada;
+    margin-left: -1rem;
+    box-shadow: 0 0 5px 0 rgba(1, 1, 1, 0.75);
+    border: solid white 2px;
+    border-radius: 0.4rem;
+    justify-content: center;
+    align-items: center;
+    will-change: transform;
+    transition: 0.3s all;
+}
+
+.cards div:focus {
+    outline: none;
+}
+
+.cards div:focus, .cards div:hover {
+    background: #e91e63;
+    color: white;
+    transform: translateY(-1rem) scale(1.2);
+}
+.cards div:focus ~ div, .cards div:hover ~ div {
+    transform: rotate(-90deg) translateY(2rem);
+}
