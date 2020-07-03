@@ -11,6 +11,20 @@ body {
     border-radius: 10px;
     font-size: 2rem;
     cursor: pointer;
-    display: flex;
-    align-content: center;
+    user-select: none;
+    text-align: center;
+    vertical-align: middle;
+    line-height: var(--size); 
+    transition: 0.5s all;
+}
+
+.simple:hover {
+    background: #e91e63;
+    border-radius: 50%;
+}
+
+.simple:active {
+    font-size: 1.5rem;
+    background: green;
+    box-shadow: inset 0 0px 10px 5px rgba(1, 1, 1, 0.61);
 }

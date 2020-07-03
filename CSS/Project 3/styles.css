@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    --size: 22rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.card {
+    width: var(--size);
+    height: 15rem;
+    background: #266fed;
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.circle {
+    width: var(--size);
+    height: var(--size);
+    background: #e91e63;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(-50% - 3rem);
+    left: calc(-50% - 1rem);
+    z-index: 1;
+    transition: transform 0.3s;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 0.5rem;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    color: #266fed;
+    mix-blend-mode: screen;
+    z-index: 2;
+}
+
+p {
+    font-size: 2rem;
+    z-index: 2;
+}
+
+.card:hover .circle {
+    transform: scale(2.5);
+}
